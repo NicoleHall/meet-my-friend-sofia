@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <% if current_matchmaker %>
+      <%= "Welcome, #{current_matchmaker.username}"%>
+    <% end %>
     <%= yield %>
   </body>
 </html>
