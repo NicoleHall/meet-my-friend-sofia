@@ -14,7 +14,8 @@
       <%= link_to "Logout", logout_path, method: :delete %>
     <% elsif flash[:notice] %>
       <%= "#{flash[:notice]}"%>
-      
+    <% elsif flash[:password_error] %>
+      <%= "#{flash[:password_error]}"%>
     <% end %>
     <%= yield %>
   </body>

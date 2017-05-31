@@ -4,6 +4,7 @@ require "test_helper"
 describe "MatchmakerLogin Integration Test" do
   it "matchmaker can login" do
     login_matchmaker
+
     assert page.assert_text('Welcome, nicole')
     assert_equal "/matchmakers/#{@matchmaker.id}", current_path
   end
@@ -19,6 +20,14 @@ describe "MatchmakerLogin Integration Test" do
   end
 
   it "matchmaker is prompted to re-enter password if password is incorrect " do
+    @matchmaker = Matchmaker.create(username: "nicole", password: "password")
+    visit login_path
+    fill_in "Username", with: "nicole"
+    fill_in "Password", with: "incorrect_password"
+    click_button "Login"
+
+    assert page.assert_text("incorrect password, please try again")
+    assert_equal("/login", current_path)
   end
 
   it "matchmaker can change password if forgotten " do
