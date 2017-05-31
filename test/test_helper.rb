@@ -19,4 +19,13 @@ class ActiveSupport::TestCase
   def teardown
     reset_session!
   end
+
+  def login_matchmaker
+    matchmaker = Matchmaker.create(username: "nicole", password: "password")
+    visit login_path
+    fill_in "Username", with: matchmaker.username
+    fill_in "Password", with: "password"
+    click_button "Login"
+  end
+
 end
