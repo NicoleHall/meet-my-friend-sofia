@@ -12,6 +12,9 @@
     <% if current_matchmaker %>
       <%= "Welcome, #{current_matchmaker.username}"%>
       <%= link_to "Logout", logout_path, method: :delete %>
+    <% elsif flash[:notice] %>
+      <%= "#{flash[:notice]}"%>
+      
     <% end %>
     <%= yield %>
   </body>
