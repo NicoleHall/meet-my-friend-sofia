@@ -11,9 +11,12 @@
  * It is generally better to create a new file per style scope.
  *
 
- */
- @import "bootstrap-sprockets";
- @import "bootstrap";
+ /*
+ *
+ *= require style
+ *= require_self
+*/
+
 
 .bucket {
   width: 564px;
