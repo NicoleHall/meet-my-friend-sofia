@@ -1,0 +1,22 @@
+<div class="bucket">
+  <% if flash[:failed_password_reset] %>
+    <%= "#{flash[:failed_password_reset]}" %>
+  <% end %>
+
+  <%= form_for(@matchmaker, url: {action: "update"}) do |f| %>
+
+    <div class="form-group">
+      <div class="form-group col-md-4"><%= f.label :new_password %></div>
+      <div class="form-group col-md-8"><%= f.password_field(:new_password, :class => "form-control") %></div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-group col-md-4"><%= f.label :new_password_confirmation %></div>
+      <div class="form-group col-md-8"><%= f.password_field(:new_password_confirmation, :class => "form-control") %></div>
+    </div>
+
+    <div class="col-md-offset-2 col-md-10">
+      <button type="submit" class="btn btn-default btn-primary">Change Password</button>
+    </div>
+  <% end %>
+</div>

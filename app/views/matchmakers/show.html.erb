@@ -1,1 +1,4 @@
 <h1>Matchmaker show page </h1>
+<% if flash[:success]%>
+  <%= "Thanks #{@matchmaker.username}, #{flash[:success]}" %>
+<% end %>
