@@ -12,25 +12,12 @@
  *
 
  /*
- *
+ * require_tree .
  *= require style
+ *= require welcome
  *= require_self
 */
 
-
-.bucket {
-  width: 564px;
-  position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    margin: auto;
-}
-
-div.bush-baby {
-  height: 100px;
-  width: 100px;
-
+body {
+  background-color: grey
 }

@@ -1,3 +1,14 @@
+body {
+  background: url('<%= asset_path 'meet_my_friend_sofia.jpeg' %>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  width: 100vw;
+  height: 100vh;
+}
+
 
 .welcome-image {
   //   background-position: center;
@@ -16,9 +27,28 @@
   // /* Set a background color that will be displayed
   //    while the background image is loading */
   // background-color: #464646;
+  background-image: image_tag("meet_my_friend_sofia.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;
+}
+
+.handwriting-font {
+  font-family: 'Pacifico', cursive;
+}
+
+.white-font {
+  color: #fed136;
+  font-weight: bold;
+}
+
+.headline {
+  font-size: 2em;
+  color: #fed136;
+}
+
+body {
+
 }
