@@ -6,18 +6,157 @@
   <%= stylesheet_link_tag "application", :media => "all"%>
 
 </head>
-<body>
-  <section class="container">  <!-- begin navbar -->
-    <nav class="navbar" style="background-color: transparent;">
-      <a class="navbar-brand handwriting-font headline" href="#">Meet My Friend Sofia</a>
+<body id="page-top" class="index">
+  <!-- navbar -->
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">Meet My Friend Sofia</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right ">
-          <li class="active white-font"><a href="#">SIGN UP / SIGN IN<span class="sr-only">(current)</span></a></li>
-          <li class="white-font"><a href="#">CONTACT</a></li>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#services">Services</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#about">About</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#team">Team</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
-    </nav>
-  </section>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Header -->
+
+  <header>
+    <div class="container">
+       <div class="intro-text">
+          <div class="intro-lead-in"></div>
+          <div class="intro-heading">It's Nice To Meet You</div>
+          <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+       </div>
+    </div>
+</header>
+  <!-- End Header -->
+
+
+<!-- Portfolio Grid Section -->
+<section id="portfolio" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Featured Daters</h2>
+                <h3 class="section-subheading text-muted">Contact Matchmaker To Learn More About Our Featured Daters</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="http://www.ifred.org/wp-content/uploads/2014/11/woman.jpg" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Nia Keegan</h4>
+                    <p class="text-muted">Contact Matchmaker</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="http://oregonstate.edu/dept/ncs/lifeatosu/wp-content/uploads/2016/04/greenwood.jpg" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Camelia Hibbert</h4>
+                    <p class="text-muted">Contact Matchmaker</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="http://www.voyagesphotosmanu.com/Complet/images/italian-woman-gr.jpg" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Christine Ragna</h4>
+                    <p class="text-muted">Contact Matchmaker</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="https://media.glamour.com/photos/5696d70301ed531c6f00b97d/master/w_1024,c_limit/sex-love-life-2015-05-woman-1-main.jpg" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Ana Adam</h4>
+                    <p class="text-muted">Contact Matchmaker</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="https://static1.squarespace.com/static/57da0db420099e49b4dc37e2/57de2a932994ca976a72bc13/57de2ad12e69cf9a7ae40392/1476251140811/smile-%E2%80%94-young-Asian-man-2926282.jpg" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Charlie Middlesworth</h4>
+                    <p class="text-muted">Contact Matchmaker</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="https://bossip.files.wordpress.com/2016/01/screen-shot-2016-01-21-at-8-54-54-am-e1453384605162.png" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Osiris Wilson</h4>
+                    <p class="text-muted">Contact Matchmaker</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
