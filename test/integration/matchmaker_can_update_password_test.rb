@@ -21,7 +21,6 @@ describe "MatchmakerCanUpdatePassword Integration Test" do
     click_button "Change Password"
 
     assert_equal edit_matchmaker_path(@matchmaker.id), current_path
-    save_and_open_page
     page.assert_text("New passwords did not match, please re-enter a new password")
   end
 end

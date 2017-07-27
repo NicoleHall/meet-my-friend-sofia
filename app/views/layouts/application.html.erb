@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meet My Friend Sofia</title>
 
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
   <%= favicon_link_tag 'favicon.ico' %>
   <%= csrf_meta_tags %>
 
@@ -15,25 +15,72 @@
 
 
   <!-- Custom Fonts -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
 
 
 </head>
 
 <body>
-  <% if current_matchmaker %>
-    <%= "Welcome, #{current_matchmaker.username}"%>
-    <%= link_to "Logout", logout_path, method: :delete %>
-  <% elsif flash[:notice] %>
-    <%= "#{flash[:notice]}"%>
-  <% elsif flash[:password_error] %>
-    <%= "#{flash[:password_error]}"%>
-  <% end %>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">Meet My Friend Sofia</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <% if current_matchmaker %>
+              <%= "Welcome, #{current_matchmaker.username}"%>
+              <%= link_to "Logout", logout_path, method: :delete, class: "page-scroll" %>
+            <% elsif flash[:notice] %>
+              <%= "#{flash[:notice]}"%>
+            <% elsif flash[:password_error] %>
+              <%= "#{flash[:password_error]}"%>
+            <% elsif current_matchmaker.nil? %>
+              <%= link_to "Create An Account", new_matchmaker_path %>
+
+              <!-- <a class="page-scroll" href="#services">Log In</a> -->
+            <% end %>
+          </li>
+          <li>
+            <% if !current_matchmaker %>
+              <a class="page-scroll" href="/login">Sign In</a>
+            <% end %>
+          </li>
+          <li>
+            <a class="page-scroll" href="#about">About</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#team">Team</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+
 
   <%= yield %>
 </body>

@@ -1,12 +1,14 @@
-<h1>Create a new account</h1>
+<div class="container nudge-down">
 
-<%= form_for(@matchmaker) do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %><br>
+    <h6 class="call-to-action">Become A Matchmaker!</h6>
+    <%= form_for @matchmaker, :url => url_for(:controller => "matchmakers", :action => "create") do |f| %>
+      <%= f.label :username %>
+      <input <%= f.text_field :username, :placeholder => "User Name", :class => "username"%> <br>
 
-  <%= f.label :password %>
-  <%= f.text_field :password %><br>
+      <%= f.label :password %>
+      <input <%= f.text_field :password, :placeholder=>"Password"%> <br>
 
-  <%= f.submit("Create Matchmaker's Account") %>
+      <%= f.submit("Create Matchmaker's Account") %>
+    <% end %>
 
-<% end %>
+</div>
