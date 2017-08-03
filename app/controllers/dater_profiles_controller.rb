@@ -1,0 +1,2 @@
+class DaterProfilesController < ApplicationController
+end

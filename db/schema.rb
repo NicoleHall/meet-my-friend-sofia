@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530211900) do
+ActiveRecord::Schema.define(version: 20170803232120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dater_profiles", force: :cascade do |t|
+    t.integer  "matchmaker_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "name"
+    t.integer  "age"
+    t.integer  "zipcode"
+    t.integer  "gender"
+    t.integer  "kids"
+    t.boolean  "interested_in_men"
+    t.boolean  "interested_in_women"
+    t.boolean  "interested_in_any"
+    t.index ["matchmaker_id"], name: "index_dater_profiles_on_matchmaker_id", using: :btree
+  end
 
   create_table "matchmakers", force: :cascade do |t|
     t.string   "username"
@@ -22,4 +37,5 @@ ActiveRecord::Schema.define(version: 20170530211900) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "dater_profiles", "matchmakers"
 end
